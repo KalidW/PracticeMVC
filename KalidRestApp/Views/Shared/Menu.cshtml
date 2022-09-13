@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutRoot.cshtml";
+
+}
+@if (IsSectionDefined("Greetings"))
+{
+    <div>
+        @RenderSection("Greetings")
+    </div>
+}
+
+
+<div style="background-color:indianred">
+    <h2> Check Out Our Menu! </h2>
+    <ul>
+        <li> Chicken over Rice</li>
+        <li> Cheese Burger</li>
+        <li> Chicken Kebob </li>
+    </ul>
+    
+
+    @RenderBody()
+</div>
+
+@if (IsSectionDefined("Footer"))
+{
+    <div>
+        @RenderSection("Footer")
+    </div>
+}
+
